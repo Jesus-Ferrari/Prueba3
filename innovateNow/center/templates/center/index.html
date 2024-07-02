@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .main-content {
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .main-content h2 {
+            color: #333;
+            text-align: center;
+        }
+        .main-content p {
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Innovate Now</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                {% for item in navbar_items %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ item.url }}">{{ item.nombre }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>INNOVATE NOW</h1>
+    </header>
+    <div class="container">
+        <section class="main-content">
+            <h2>Bienvenido a nuestro portal para emprendedores</h2>
+            <p>En este sitio web encontrarás recursos valiosos, herramientas y consejos para impulsar tu negocio como emprendedor innovador. Nos enfocamos en proporcionar:</p>
+            <ul>
+                <li><strong>Networking:</strong> Conecta con otros emprendedores y profesionales.</li>
+                <li><strong>Recursos:</strong> Accede a guías, tutoriales y artículos sobre estrategias empresariales.</li>
+                <li><strong>Eventos:</strong> Participa en eventos locales e internacionales para aprender y hacer crecer tu red de contactos.</li>
+            </ul>
+            <p>¡Únete a nuestra comunidad de emprendedores y lleva tu negocio al siguiente nivel!</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Portal para Emprendedores Innovadores. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
